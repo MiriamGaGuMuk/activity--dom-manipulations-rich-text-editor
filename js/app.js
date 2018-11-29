@@ -6,8 +6,8 @@
  */
     document.querySelector('.rte-fontstyle, rte-italics').addEventListener('click', function(){
         let textbox = document.querySelector('.textbox');
-        // textbox.classList.toggle("change");
-        textbox.style.fontStyle = "italic";
+        textbox.classList.toggle("rte-italics");
+        // textbox.style.fontStyle = "italic";
 
     });
         
@@ -20,7 +20,8 @@
  */ 
     document.querySelector('.rte-fontstyle, rte-bold').addEventListener('click', function(){
         let textbox = document.querySelector('.textbox');
-        textbox.style.fontWeight = "bold";
+        textbox.classList.toggle("rte-bold");
+        // textbox.style.fontWeight = "bold";
     });
 
 
@@ -31,10 +32,10 @@
  *         When user clicks, it should change the `fontSize` property of the
  *         `<p class="textbox"></p>` to the value of the button that was clicked.
  */
-    document.querySelector('.rte-fontsize').addEventListener('click', function(){
+    document.querySelectorAll('.rte-fontsize').addEventListener ('click', function(){
         let textbox = document.querySelector('.textbox');
-        var btn = document.querySelector('.rte-fontsize')
-        textbox.style.fontSize = btn.textContent
+        let btn = document.querySelectorAll('.rte-fontsize');
+        textbox.style.fontSize = btn.textContent;
     });
 
 /**
@@ -63,5 +64,18 @@
     buttonPalete.addEventListener('click', changeBackground)
     }
 
+//with data attributes
+// let palete = document.querySelectorAll(".color-palette button")
+// let textbox = document.querySelector('.textbox');
 
-   
+//Attribute data  is easier to get there
+// let colorBtn = document.querySelector('.rte-fontcolor');
+// 
+// colorBtn.forEach(function(btn){
+    // btn.addEventListener('click', function(){
+        // document.querySelector('.textbox').style.color = btn.dataset.color;
+    // });
+// });
+
+//with an event solved
+//
